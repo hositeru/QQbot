@@ -50,7 +50,15 @@ plugins:
     ~adapter-line:3uc6jt: {}
     ~adapter-mail:95245l: {}
     ~adapter-matrix:a3wjcm: {}
-    ~adapter-qq:bnnuas: {}
+    adapter-qq:bnnuas:
+      id: '102081839'
+      secret: wlngMp5rVwCE5lDQ
+      token: YOP9CZPR8gHNxdmxUuUjNTHGYatq9XoC
+      type: private
+      intents:
+        - GUILDS
+        - GUILD_MEMBERS
+        - GUILD_MESSAGES
     ~adapter-satori:hdsn12: {}
     ~adapter-slack:ahznzx: {}
     ~adapter-telegram:9y4ad6: {}
@@ -62,3 +70,6 @@ plugins:
     $if: env.NODE_ENV === 'development'
     hmr:ykx6w8:
       root: .
+  ~blockly-null:9ajs94: {}
+  ~puppeteer:gwmxo5: {}
+  darkness-over-vellsar:275tvn: {}
