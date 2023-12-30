@@ -38,10 +38,15 @@ plugins:
     status:r00y3g: {}
     theme-vanilla:nhjdzj: {}
   group:storage:
-    database-sqlite:amlpp2: {}
+    ~database-sqlite:amlpp2:
+      path: data/_data_DOV.db
     ~database-mysql:d9yp6y: {}
     ~database-mongo:6ld1ls: {}
     assets-local:k9km0g: {}
+    database-postgres:vk4kca:
+      user: postgres
+      password: '0259942051'
+      database: postgres
   group:adapter:
     ~adapter-dingtalk:xgjzea: {}
     ~adapter-discord:bedvwo: {}

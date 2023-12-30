@@ -63,6 +63,7 @@
     "@koishijs/plugin-commands": "^3.4.3",
     "@koishijs/plugin-config": "^2.8.1",
     "@koishijs/plugin-console": "5.23.0",
+    "@koishijs/plugin-database-postgres": "1.1.1",
     "@koishijs/plugin-database-sqlite": "^3.8.3",
     "@koishijs/plugin-explorer": "^1.5.0",
     "@koishijs/plugin-help": "^2.4.1",

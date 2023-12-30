@@ -12,7 +12,7 @@ npm run start
 ## 启动开发者模式
 npm run dev
 
-## 启动开发版
+## 编译
 npm run build
 
 ## 创建一个新插件
