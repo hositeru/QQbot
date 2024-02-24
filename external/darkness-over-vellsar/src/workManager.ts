@@ -114,7 +114,7 @@ async function bar(session: any,ctx: Context,data: Pick<ap01, Keys<ap01, any>>[]
   if(data[0].timestage!='深夜'&&data[0].timestage!='凌晨'){
      return '现在还没有开业，请稍后再来。';
    }
-   let str='你开始在酒吧跳舞。';
+   let str='';
    let data02 =await ctx.database.get('ap02', session.userId);
    let flg=false;
    if(data02!=null&&data02.length>=1){
@@ -154,7 +154,7 @@ async function bar(session: any,ctx: Context,data: Pick<ap01, Keys<ap01, any>>[]
       str+='\n生挿入+'+sextimes;
       str+='\n性感值+'+sextimes*10;
       str+='\n你获得了'+sexnum+'ml白浊液。\n'
-       +'，EROS+1。';
+       +'EROS+1。';
        Tools.get(ctx,session.userId,'白浊液',sexnum);
       EROS=1;
     }
@@ -162,7 +162,7 @@ async function bar(session: any,ctx: Context,data: Pick<ap01, Keys<ap01, any>>[]
 
   let money=800+sextimes*500;
    str+='\n酒吧老板：作为新人来讲干得很不错啊！这是你今天的薪水！';
-   str+='\n体力-60，精力-60，饱食度-60，金币+'+money;
+   str+='\n体力-40，精力-40，饱食度-40，金币+'+money;
    let incap=0;
    let locatUpd='龙人酒吧';
    if(data[0].stamina<60||data[0].spirit<60||data[0].hunger<60){

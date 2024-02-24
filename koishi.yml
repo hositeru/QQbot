@@ -57,7 +57,7 @@ plugins:
     ~adapter-matrix:a3wjcm: {}
     adapter-qq:bnnuas:
       id: '102081839'
-      secret: wlngMp5rVwCE5lDQ
+      secret: W2Y4a6c8fCjGnKrOvT1Z7fDlJrQzY7gF
       token: YOP9CZPR8gHNxdmxUuUjNTHGYatq9XoC
       type: private
       intents:
@@ -78,3 +78,13 @@ plugins:
   ~blockly-null:9ajs94: {}
   ~puppeteer:gwmxo5: {}
   darkness-over-vellsar:275tvn: {}
+  adapter-qq:x7ep66:
+    id: '102081839'
+    intents:
+      - GUILDS
+      - GUILD_MEMBERS
+      - GUILD_MESSAGES
+    type: private
+    token: YOP9CZPR8gHNxdmxUuUjNTHGYatq9XoC
+    secret: W2Y4a6c8fCjGnKrOvT1Z7fDlJrQzY7gF
+    endpoint: https://sandbox.api.sgroup.qq.com

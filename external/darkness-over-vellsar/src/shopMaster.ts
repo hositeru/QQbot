@@ -36,7 +36,7 @@ export module ShopMaster {
             { name: '黑白条纹长筒袜', price: 800, quantity: 1 },
             { name: '黑色吊带袜', price: 800, quantity: 1 },
             { name: '白色吊带袜', price: 800, quantity: 1 },
-            { name: '黑白条纹长筒袜', price: 800, quantity: 1 },
+            { name: '黑白条纹吊带袜', price: 800, quantity: 1 },
             { name: '网袜', price: 3000, quantity: 1 },
             { name: '足袋', price: 500, quantity: 1 },
             { name: '冒险者短靴', price: 500, quantity: 1 },

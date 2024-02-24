@@ -56,6 +56,11 @@
     schemastery "^3.14.1"
     ws "^8.14.2"
 
+"@cordisjs/timer@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.npmjs.org/@cordisjs/timer/-/timer-0.2.0.tgz"
+  integrity sha512-6FHNKI9f5y1GskvWm0l6XxkFNi8wswnLwNbTOCeSLQ9oZwx8d9WjE+sQENqN6egkLo5QmMQE+0D8TwU5/WkMxg==
+
 "@ctrl/tinycolor@^3.4.1":
   version "3.6.1"
 
@@ -141,29 +146,35 @@
     cosmokit "^1.5.1"
     schemastery-vue "^7.2.2"
 
-"@koishijs/console@^5.16.0", "@koishijs/console@^5.16.1", "@koishijs/console@^5.17.1", "@koishijs/console@^5.19.1", "@koishijs/console@^5.20.0", "@koishijs/console@^5.21.0", "@koishijs/console@^5.22.1", "@koishijs/console@^5.22.3", "@koishijs/console@^5.22.6", "@koishijs/console@^5.23.0":
-  version "5.23.0"
-  resolved "https://registry.npmjs.org/@koishijs/console/-/console-5.23.0.tgz"
-  integrity sha512-xLngbM5bYIZETehw8IalruQv/1HQZEJtL4ooUf9dG8w+xECBRl4kqAefOV2v8/uwpgwnL+8nZgleVXCQDRUHSg==
+"@koishijs/console@^5.17.1", "@koishijs/console@^5.19.1", "@koishijs/console@^5.20.0", "@koishijs/console@^5.22.3", "@koishijs/console@^5.24.3", "@koishijs/console@^5.25.4", "@koishijs/console@^5.25.6":
+  version "5.25.6"
+  resolved "https://registry.npmjs.org/@koishijs/console/-/console-5.25.6.tgz"
+  integrity sha512-atglrx4E+qGKt8CXbwmO4It8L2VVkmQzlNWJow9xoHLgRDCGlHIoUKsC1STlTZj5dWZU8nglYIsnBU/PoAUZig==
 
-"@koishijs/core@4.16.2":
-  version "4.16.2"
+"@koishijs/core@4.16.4":
+  version "4.16.4"
+  resolved "https://registry.npmjs.org/@koishijs/core/-/core-4.16.4.tgz"
+  integrity sha512-xnWsbsIBq5LKdAvQlXLK2B3oRCdMxs03t37+TElwGizXeUICKmiMLdblT3zES8J2NT3eEc89qwMft+7yFPoMfw==
   dependencies:
     "@koishijs/i18n-utils" "^1.0.0"
-    "@koishijs/utils" "^7.1.1"
+    "@koishijs/utils" "^7.1.2"
     "@minatojs/core" "^2.8.1"
-    "@satorijs/core" "^3.3.2"
-    cordis "^3.4.1"
-    cosmokit "^1.5.1"
+    "@satorijs/core" "^3.4.1"
+    cordis "^3.6.0"
+    cosmokit "^1.5.2"
     fastest-levenshtein "^1.0.16"
 
 "@koishijs/i18n-utils@^1.0.0":
   version "1.0.0"
+  resolved "https://registry.npmjs.org/@koishijs/i18n-utils/-/i18n-utils-1.0.0.tgz"
+  integrity sha512-eCGDBg7KQLJ76G+h8NJ8QePDLyliQ9DDoM89g3xeEInLLv+Gh6VWHqpgCw2XkxFwI7zJfmG5nyJAS7H31rS/TQ==
   dependencies:
     cosmokit "^1.4.2"
 
-"@koishijs/loader@4.3.2":
-  version "4.3.2"
+"@koishijs/loader@4.3.4":
+  version "4.3.4"
+  resolved "https://registry.npmjs.org/@koishijs/loader/-/loader-4.3.4.tgz"
+  integrity sha512-qm21LanquolZQatu9oK9mAwdG/EodpXdOZSzy6P33AG1kXzsqU4hdysNmeRtgP86Uzpa5U20UfLpsmyYZi1KZQ==
   dependencies:
     dotenv "^16.3.1"
     js-yaml "^4.1.0"
@@ -174,22 +185,24 @@
   dependencies:
     "@koishijs/console" "^5.19.1"
 
-"@koishijs/plugin-adapter-discord@4.1.9":
-  version "4.1.9"
-  resolved "https://registry.npmjs.org/@koishijs/plugin-adapter-discord/-/plugin-adapter-discord-4.1.9.tgz"
-  integrity sha512-lZ2oxtfE/zqY4KvirmZSR1onw+l/s30suWHAlow31f0DoVwTE6h6JKF+impwl7oBEeWZNfcMextCHkI1RFjtyQ==
+"@koishijs/plugin-adapter-discord@4.2.0":
+  version "4.2.0"
+  resolved "https://registry.npmjs.org/@koishijs/plugin-adapter-discord/-/plugin-adapter-discord-4.2.0.tgz"
+  integrity sha512-GPIHn1n2B+txZnX4pyXyvKH0gUeteRagEztbg/XD3sNFJE7X+Afcze8/FabH3F+OuHjd1UtDWPme/GW8Q9RHNQ==
   dependencies:
-    "@satorijs/adapter-discord" "^4.1.9"
+    "@satorijs/adapter-discord" "^4.2.0"
 
-"@koishijs/plugin-adapter-kook@4.3.4":
-  version "4.3.4"
-  resolved "https://registry.npmjs.org/@koishijs/plugin-adapter-kook/-/plugin-adapter-kook-4.3.4.tgz"
-  integrity sha512-SRHyQ5OeLH1hgphZtp8oTDbIaUtYqWD3SsXxXM3MvYa9TZm0LyJyt/Nxtl0oQhEgVi5lD8bFH6wgU8IdgqggMA==
+"@koishijs/plugin-adapter-kook@4.4.0":
+  version "4.4.0"
+  resolved "https://registry.npmjs.org/@koishijs/plugin-adapter-kook/-/plugin-adapter-kook-4.4.0.tgz"
+  integrity sha512-PCsz/mxmJVQe6mdBscEnaQxpxOi09DxI9e+5nGpxHsFpDsyE/isM1zSVytMvQkHwSL0KM63jp3rwqoVnJ2k/zQ==
   dependencies:
-    "@satorijs/adapter-kook" "^4.3.4"
+    "@satorijs/adapter-kook" "^4.4.0"
 
-"@koishijs/plugin-adapter-qq@^4.2.5":
+"@koishijs/plugin-adapter-qq@4.2.5":
   version "4.2.5"
+  resolved "https://registry.npmjs.org/@koishijs/plugin-adapter-qq/-/plugin-adapter-qq-4.2.5.tgz"
+  integrity sha512-lEHwBQGFiVGa0nEjWnAyUeW4xSymOxTgMk6OtIs09AAqWenJ2IOMvdVgNrZgwZZ1a+CcRqm6lpVBNd8hgNISug==
   dependencies:
     "@satorijs/adapter-qq" "^4.2.5"
 
@@ -198,66 +211,75 @@
   dependencies:
     "@satorijs/adapter-satori" "^1.0.3"
 
-"@koishijs/plugin-adapter-telegram@^4.2.1":
-  version "4.2.1"
+"@koishijs/plugin-adapter-telegram@4.3.0":
+  version "4.3.0"
+  resolved "https://registry.npmjs.org/@koishijs/plugin-adapter-telegram/-/plugin-adapter-telegram-4.3.0.tgz"
+  integrity sha512-2uJBZsUlDNJqT/h5BQqxdX3pJxIQhxow21yYouu0fa43E6X37OPn+9oWdpFPcjnFp5+bp9PGAFJtP757pmJckw==
   dependencies:
-    "@satorijs/adapter-telegram" "^4.2.1"
+    "@satorijs/adapter-telegram" "^4.3.0"
 
-"@koishijs/plugin-admin@2.0.0-alpha.6":
-  version "2.0.0-alpha.6"
-  resolved "https://registry.npmjs.org/@koishijs/plugin-admin/-/plugin-admin-2.0.0-alpha.6.tgz"
-  integrity sha512-wsAlaRwsAsXiUHCtMgvsA5rw7ChsiJ2sIAeWBqsqGSd2pJB7SS1F8wXdVSv5h+gCwDylCsNt+5lKcb/lpJYBKA==
+"@koishijs/plugin-admin@2.0.0-beta.3":
+  version "2.0.0-beta.3"
+  resolved "https://registry.npmjs.org/@koishijs/plugin-admin/-/plugin-admin-2.0.0-beta.3.tgz"
+  integrity sha512-C8AEnSnIu2M9dLFE3XWmdIQr+84lF/WpnVOTJYX9WxMusvkqxSmqn6vyamn0S1PtFOuTq9HmgA0NBUPzH/WDzA==
   dependencies:
-    "@koishijs/console" "^5.23.0"
     throttle-debounce "^3.0.1"
 
-"@koishijs/plugin-analytics@^2.0.5":
-  version "2.0.5"
+"@koishijs/plugin-analytics@2.0.6":
+  version "2.0.6"
+  resolved "https://registry.npmjs.org/@koishijs/plugin-analytics/-/plugin-analytics-2.0.6.tgz"
+  integrity sha512-SGZelLyWEQanIOnezhDgBKIZtKhwBvWry5CqSmGlFS/eM0hD0SKtS8fmrZAlKQ1ieBptLEJHpnHtl0fkQ7RRZA==
   dependencies:
-    "@koishijs/console" "^5.22.1"
+    "@koishijs/console" "^5.24.3"
 
 "@koishijs/plugin-auth@^4.1.6":
   version "4.1.6"
   dependencies:
     "@koishijs/console" "^5.20.0"
 
-"@koishijs/plugin-bind@^1.4.5":
-  version "1.5.0"
+"@koishijs/plugin-bind@1.5.1":
+  version "1.5.1"
+  resolved "https://registry.npmjs.org/@koishijs/plugin-bind/-/plugin-bind-1.5.1.tgz"
+  integrity sha512-/8Ty4ST/1EghTKO3of1nmi0d46teHEZNHWrCRUK0shq6zw8QtN4++V+NogIZFtN64fss5c5zm6mzkan6uecVsw==
 
-"@koishijs/plugin-commands@^3.4.3":
-  version "3.4.3"
+"@koishijs/plugin-commands@3.4.8":
+  version "3.4.8"
+  resolved "https://registry.npmjs.org/@koishijs/plugin-commands/-/plugin-commands-3.4.8.tgz"
+  integrity sha512-4Pv5VbpeSlbJ1N5Az6JKykhdHKWFTp4uwztbS18j7xM2eRgUHRRnOGBQO2vNiEDQfMQ8ghgr1hgyuTLZQbBVyg==
   dependencies:
-    "@koishijs/console" "^5.17.1"
-    throttle-debounce "^3.0.1"
+    "@koishijs/console" "^5.25.6"
 
-"@koishijs/plugin-config@^2.8.1":
-  version "2.8.1"
+"@koishijs/plugin-config@2.8.2":
+  version "2.8.2"
+  resolved "https://registry.npmjs.org/@koishijs/plugin-config/-/plugin-config-2.8.2.tgz"
+  integrity sha512-XcX61XnPzEgCK1EE4AQxU6/tk5Y/lnfrLrXWVZ/ucyAWtvcmmdBLNU/JkegFG1F/mRl1XYUSVDFbsdpnEghyjg==
   dependencies:
-    "@koishijs/console" "^5.22.6"
+    "@koishijs/console" "^5.25.4"
     "@koishijs/registry" "^7.0.0"
-    throttle-debounce "^3.0.1"
 
-"@koishijs/plugin-console@^5", "@koishijs/plugin-console@^5.11.6", "@koishijs/plugin-console@^5.16.0", "@koishijs/plugin-console@^5.16.1", "@koishijs/plugin-console@^5.17.1", "@koishijs/plugin-console@^5.19.1", "@koishijs/plugin-console@^5.20.0", "@koishijs/plugin-console@^5.21.0", "@koishijs/plugin-console@^5.22.1", "@koishijs/plugin-console@^5.22.3", "@koishijs/plugin-console@^5.22.6", "@koishijs/plugin-console@^5.23.0", "@koishijs/plugin-console@^5.7.7", "@koishijs/plugin-console@5.23.0":
-  version "5.23.0"
-  resolved "https://registry.npmjs.org/@koishijs/plugin-console/-/plugin-console-5.23.0.tgz"
-  integrity sha512-F0N9OXw1/DiQmdBHT6NAyPqsWXpfRSt256nc5c3iZqJm2i1nkBnbfu7tpq3n6+7v2K64c1iexMdvJUvKJ99KbA==
+"@koishijs/plugin-console@^5", "@koishijs/plugin-console@^5.11.6", "@koishijs/plugin-console@^5.17.1", "@koishijs/plugin-console@^5.19.1", "@koishijs/plugin-console@^5.20.0", "@koishijs/plugin-console@^5.22.3", "@koishijs/plugin-console@^5.24.3", "@koishijs/plugin-console@^5.25.4", "@koishijs/plugin-console@^5.25.6", "@koishijs/plugin-console@^5.7.7", "@koishijs/plugin-console@5.25.6":
+  version "5.25.6"
+  resolved "https://registry.npmjs.org/@koishijs/plugin-console/-/plugin-console-5.25.6.tgz"
+  integrity sha512-cvxpkednMa/kSjIOCNYP2rOuktaBLdliLmIYsBKIOxUQooEav2bq6b9GQYM4hxqv/e6eykAtH8TyP7vrAbv2fQ==
   dependencies:
-    "@koishijs/console" "^5.23.0"
+    "@koishijs/console" "^5.25.6"
     open "^8.4.2"
     uuid "^8.3.2"
     ws "^8.14.2"
 
-"@koishijs/plugin-database-postgres@1.1.1":
-  version "1.1.1"
-  resolved "https://registry.npmjs.org/@koishijs/plugin-database-postgres/-/plugin-database-postgres-1.1.1.tgz"
-  integrity sha512-gVUqXF/H/aGUcxwqy8G9NC4yISqFORZGjhjyGisZloFXntgQb2vwTYFDym7i87iyufwOc1V+wRdVr6uIBNsFZw==
+"@koishijs/plugin-database-postgres@1.1.3":
+  version "1.1.3"
+  resolved "https://registry.npmjs.org/@koishijs/plugin-database-postgres/-/plugin-database-postgres-1.1.3.tgz"
+  integrity sha512-VQyriEDsFq4yzeBaX74jC84pIajuGtirEUtJ+uEaL/CwwAgiF3irQUz68fyObb4ibgZVoqJC+9X73w3bX5qcug==
   dependencies:
-    "@minatojs/driver-postgres" "^1.1.1"
+    "@minatojs/driver-postgres" "^1.1.3"
 
-"@koishijs/plugin-database-sqlite@^3.8.3":
-  version "3.8.3"
+"@koishijs/plugin-database-sqlite@3.8.4":
+  version "3.8.4"
+  resolved "https://registry.npmjs.org/@koishijs/plugin-database-sqlite/-/plugin-database-sqlite-3.8.4.tgz"
+  integrity sha512-huEO69g276EUB2YPRsw067hftKJ4BoFgBuUVAqf3sOP6ib9JxCebf0Z7aAia6aCtPQwcAC159wd9W7TnAc5aog==
   dependencies:
-    "@minatojs/driver-sqlite" "^3.8.3"
+    "@minatojs/driver-sqlite" "^3.8.4"
 
 "@koishijs/plugin-explorer@^1.5.0":
   version "1.5.0"
@@ -268,8 +290,10 @@
     chokidar "^3.5.3"
     throttle-debounce "^3.0.1"
 
-"@koishijs/plugin-help@^2.4.1":
-  version "2.4.1"
+"@koishijs/plugin-help@2.4.3":
+  version "2.4.3"
+  resolved "https://registry.npmjs.org/@koishijs/plugin-help/-/plugin-help-2.4.3.tgz"
+  integrity sha512-SwnUnu9+79hEiU6YeOjO+Adx2If8Owh/gqDrHB+mvorNDxIXir3CFRa7zSvq5xu+/kU6gha/wpVy2yXzxlogAw==
 
 "@koishijs/plugin-hmr@^1.2.6":
   version "1.2.6"
@@ -278,58 +302,60 @@
     chokidar "^3.5.3"
     throttle-debounce "^3.0.1"
 
-"@koishijs/plugin-insight@^3.4.4":
-  version "3.4.4"
+"@koishijs/plugin-insight@3.4.5":
+  version "3.4.5"
+  resolved "https://registry.npmjs.org/@koishijs/plugin-insight/-/plugin-insight-3.4.5.tgz"
+  integrity sha512-/DSHfWa9oJ0pP1Kg2kVAggH9xktpILsaSinS1HTPKsYz7aatSMeFz6X9Q1VwQpUGye/gUfBWQob/RzJnLqnYjQ==
   dependencies:
-    "@koishijs/console" "^5.21.0"
-    throttle-debounce "^3.0.1"
+    "@koishijs/console" "^5.25.4"
 
 "@koishijs/plugin-inspect@^1.1.3":
   version "1.1.3"
 
-"@koishijs/plugin-locales@^2.5.1":
-  version "2.5.1"
+"@koishijs/plugin-locales@2.5.2":
+  version "2.5.2"
+  resolved "https://registry.npmjs.org/@koishijs/plugin-locales/-/plugin-locales-2.5.2.tgz"
+  integrity sha512-DVm0pVnworvASt4w7CwPy+dsFgEKxacVs56Acoy7jZ0fmoxsXT/pbfA88armVJRGEl4tjn+kzD1wtWxPCCsoSg==
   dependencies:
-    "@koishijs/console" "^5.16.0"
+    "@koishijs/console" "^5.25.4"
     js-yaml "^4.1.0"
-    throttle-debounce "^3.0.1"
 
-"@koishijs/plugin-logger@2.6.3":
-  version "2.6.3"
-  resolved "https://registry.npmjs.org/@koishijs/plugin-logger/-/plugin-logger-2.6.3.tgz"
-  integrity sha512-rzqU6sDccZGpybIItT5ejfA3FVf8pvPHLsUVtJBwOG9O/jlDzS5OLKI4uA2pjHpjxwGc7sbBVXPiXs4jEQJGVQ==
+"@koishijs/plugin-logger@2.6.6":
+  version "2.6.6"
+  resolved "https://registry.npmjs.org/@koishijs/plugin-logger/-/plugin-logger-2.6.6.tgz"
+  integrity sha512-xWHRwUfuIbpnLxK6sTuNgexUs+5ND6xKv71GqSRoXX7FD0GP5ooN1ug16wgE1REzZQkoaYwv5vMldTzdUAE80w==
   dependencies:
-    "@koishijs/console" "^5.23.0"
-    throttle-debounce "^3.0.1"
+    "@koishijs/console" "^5.25.6"
 
-"@koishijs/plugin-market@2.8.2":
-  version "2.8.2"
-  resolved "https://registry.npmjs.org/@koishijs/plugin-market/-/plugin-market-2.8.2.tgz"
-  integrity sha512-RO3OCHoH79eQTOAmyqsBmp+rUSjHNEs1BSelziug07mjGDXWGNBLKmW3+31XV5+teupnMy2z7N3Xa+escuoBow==
+"@koishijs/plugin-market@2.9.3":
+  version "2.9.3"
+  resolved "https://registry.npmjs.org/@koishijs/plugin-market/-/plugin-market-2.9.3.tgz"
+  integrity sha512-ERr+qxhpM+GN1STTaQ0vHIkRgXQJY80W3Nua1i23cKpJmMUgtyARHFKp2NcLtvvfY03KvkPyCYkWlDhNZHnAIQ==
   dependencies:
-    "@koishijs/console" "^5.23.0"
+    "@koishijs/console" "^5.25.6"
     "@koishijs/registry" "^7.0.0"
     execa "^5.1.1"
     get-registry "^1.1.0"
     ns-require "^1.1.4"
     semver "^7.5.4"
-    throttle-debounce "^3.0.1"
     which-pm-runs "^1.1.0"
 
-"@koishijs/plugin-notifier@^0.0.1":
-  version "0.0.1"
-  dependencies:
-    "@koishijs/console" "^5.22.3"
+"@koishijs/plugin-notifier@1.1.1":
+  version "1.1.1"
+  resolved "https://registry.npmjs.org/@koishijs/plugin-notifier/-/plugin-notifier-1.1.1.tgz"
+  integrity sha512-ZreQJL6vJ6F8Z9Xu8dd4EDXjwemIpUfTdfGVk19GJ+JceOIKeqVywJ49INPUiPTD9PRCyS6qOHDV359g2OTfaw==
 
 "@koishijs/plugin-oobe@^0.0.2":
   version "0.0.2"
   dependencies:
     "@koishijs/console" "^5.19.1"
 
-"@koishijs/plugin-sandbox@^3.2.2":
-  version "3.2.2"
+"@koishijs/plugin-sandbox@3.2.4":
+  version "3.2.4"
+  resolved "https://registry.npmjs.org/@koishijs/plugin-sandbox/-/plugin-sandbox-3.2.4.tgz"
+  integrity sha512-AoI/McGKjOXMhifgoX16Zouh922w4x66lYM+W9AGt7JinWM03uiyKX8aTEFw+s/U5PsUS48L1+lsyYcOymnyBQ==
   dependencies:
-    "@koishijs/console" "^5.16.1"
+    "@koishijs/console" "^5.25.4"
 
 "@koishijs/plugin-server-satori@^2.4.0":
   version "2.4.0"
@@ -346,14 +372,13 @@
   dependencies:
     "@cordisjs/server" "^0.1.3"
 
-"@koishijs/plugin-status@7.4.4":
-  version "7.4.4"
-  resolved "https://registry.npmjs.org/@koishijs/plugin-status/-/plugin-status-7.4.4.tgz"
-  integrity sha512-OBAJbQ/RiReu5ZY+ZgA+dlPl+xMTYgIVaP/7KeAzxtlfvNNLEUAfDRa3vyIKdOWssD3czhvYZnmFoZXMtE4EmA==
+"@koishijs/plugin-status@7.4.6":
+  version "7.4.6"
+  resolved "https://registry.npmjs.org/@koishijs/plugin-status/-/plugin-status-7.4.6.tgz"
+  integrity sha512-mRS3jjWenFWwWwmiu+Zv6f/7X9+DERzUli/rk8oZDhdMdPJBJyMFa4TWF3mKlF+cZL0lqjQkspSdKxG/abF8cA==
   dependencies:
-    "@koishijs/console" "^5.22.6"
+    "@koishijs/console" "^5.25.4"
     envinfo "^7.11.0"
-    throttle-debounce "^3.0.1"
     which-pm-runs "^1.1.0"
 
 "@koishijs/registry@^7.0.0":
@@ -374,10 +399,12 @@
     prompts "^2.4.2"
     which-pm-runs "^1.1.0"
 
-"@koishijs/utils@^7.1.1":
-  version "7.1.1"
+"@koishijs/utils@^7.1.2":
+  version "7.1.2"
+  resolved "https://registry.npmjs.org/@koishijs/utils/-/utils-7.1.2.tgz"
+  integrity sha512-P94MwmNlsAHkovbaHhpRH3OByjHnKVXgXBYfxR/H4R6E/5jbWVXshL4KT3flHDxCGuJSKN5IB2wPyVcfqP+c1A==
   dependencies:
-    cosmokit "^1.5.1"
+    cosmokit "^1.5.2"
     inaba "^1.1.1"
 
 "@maikolib/vite-plugin-yaml@^1.0.1":
@@ -387,36 +414,44 @@
     js-yaml "^4.1.0"
     tosource "^2.0.0-alpha.3"
 
-"@minatojs/core@^2.8.0", "@minatojs/core@^2.8.1":
+"@minatojs/core@^2.8.1":
   version "2.8.1"
+  resolved "https://registry.npmjs.org/@minatojs/core/-/core-2.8.1.tgz"
+  integrity sha512-3aJYrizirB1d8G5OmVovU1T9iMYcd+PH0C2gkrSb7TLNk9W+1+SQR1qRWgYWpDrx2Vv8NFPACTX/rCKvc4BzPQ==
   dependencies:
     cosmokit "^1.5.1"
 
-"@minatojs/driver-postgres@^1.1.1":
-  version "1.1.1"
-  resolved "https://registry.npmjs.org/@minatojs/driver-postgres/-/driver-postgres-1.1.1.tgz"
-  integrity sha512-JP7NgGzsp+dDVk9/q9y4KAP3gksjUYgwxq0Yghv+ofvqyhdBTuuRFY0StMMrVqc1O/PEm1fQ/3r0EPHYBuR1TA==
+"@minatojs/driver-postgres@^1.1.3":
+  version "1.1.3"
+  resolved "https://registry.npmjs.org/@minatojs/driver-postgres/-/driver-postgres-1.1.3.tgz"
+  integrity sha512-gC93yIVrIItqQ/nB+467NANCjIeuu9FvmUq/DWPFb/vhCMMtl+pI+kpoEdFCrm+3DF2ZFZtyWwT/RdCvnkDGPA==
   dependencies:
-    "@minatojs/sql-utils" "^4.2.1"
-    cosmokit "^1.5.1"
+    "@minatojs/sql-utils" "^4.2.2"
+    cosmokit "^1.5.2"
     postgres "^3.4.3"
     reggol "^1.6.3"
 
-"@minatojs/driver-sqlite@^3.8.3":
-  version "3.8.3"
+"@minatojs/driver-sqlite@^3.8.4":
+  version "3.8.4"
+  resolved "https://registry.npmjs.org/@minatojs/driver-sqlite/-/driver-sqlite-3.8.4.tgz"
+  integrity sha512-jir2jBhaIXUdVmlRwONt3ijXfm6pTPoKyZjjrkfayE3bPgt55K4HB1nM3zaGny1F8wmlRa+rO1DX+MMgs47UiQ==
   dependencies:
-    "@minatojs/sql-utils" "^4.2.1"
+    "@minatojs/sql-utils" "^4.2.2"
     "@minatojs/sql.js" "^3.1.0"
-    cosmokit "^1.5.1"
+    cosmokit "^1.5.2"
     reggol "^1.6.3"
 
-"@minatojs/sql-utils@^4.2.1":
-  version "4.2.1"
+"@minatojs/sql-utils@^4.2.2":
+  version "4.2.2"
+  resolved "https://registry.npmjs.org/@minatojs/sql-utils/-/sql-utils-4.2.2.tgz"
+  integrity sha512-vEYul0lzvbc2RDhEo1ZBJgcKqJV8MuTieXLCqoSXX/G/bRFAOfnuL/l51AcNSE8mIVGCPDAU2NtC4D/xPa+eVQ==
   dependencies:
-    cosmokit "^1.5.1"
+    cosmokit "^1.5.2"
 
 "@minatojs/sql.js@^3.1.0":
   version "3.1.0"
+  resolved "https://registry.npmjs.org/@minatojs/sql.js/-/sql.js-3.1.0.tgz"
+  integrity sha512-jaEFlM03k+maWc4JHv5DgEPq6r5bcg5OmXUZ6klWbYUi7tfRySGxLjwh70v4+p8A9qxdyL9yX3D2YQiXwl1HKw==
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
@@ -455,44 +490,51 @@
     estree-walker "^2.0.2"
     picomatch "^2.3.1"
 
-"@satorijs/adapter-discord@^4.1.9":
-  version "4.1.9"
-  resolved "https://registry.npmjs.org/@satorijs/adapter-discord/-/adapter-discord-4.1.9.tgz"
-  integrity sha512-08HwlDKEluQcRCT2GdeQXTVNzUG1E+6k1Bb9U0LE8I1Uh/3gbMIC/ZA9VPZcPO6wOeA0jm2qIS20AbXjoByOFw==
+"@satorijs/adapter-discord@^4.2.0":
+  version "4.2.0"
+  resolved "https://registry.npmjs.org/@satorijs/adapter-discord/-/adapter-discord-4.2.0.tgz"
+  integrity sha512-7rBkgQ1ngQTtZ5/Jjt2MtyUccAgOLLerFrMTid4Rq5RfNNrLqZpPXybkeVIbOflRWviIfVrqE+bDywGoJ/obLA==
   dependencies:
     form-data "^4.0.0"
 
-"@satorijs/adapter-kook@^4.3.4":
-  version "4.3.4"
-  resolved "https://registry.npmjs.org/@satorijs/adapter-kook/-/adapter-kook-4.3.4.tgz"
-  integrity sha512-HPVCNk/Ys9NHW4Ydpbxbx4HKHjxL++JnpnJ+n7fBtQYBJanPwH7axkNKU0x/ux4RK+3FYz67nXBnGOi9fKD4pA==
+"@satorijs/adapter-kook@^4.4.0":
+  version "4.4.0"
+  resolved "https://registry.npmjs.org/@satorijs/adapter-kook/-/adapter-kook-4.4.0.tgz"
+  integrity sha512-xJepyUzqDU/gnuy9h8SXXyA2DjrRQ/YI3fzlNRbyMtjE8wuzkqIvU/rLtHlcS0lpCcB0Vv6r1QP6RqxSoqYTPQ==
   dependencies:
     form-data "^4.0.0"
 
 "@satorijs/adapter-qq@^4.2.5":
-  version "4.2.5"
+  version "4.3.1"
+  resolved "https://registry.npmjs.org/@satorijs/adapter-qq/-/adapter-qq-4.3.1.tgz"
+  integrity sha512-pnLs6rb4ILSZhNG7rYZPJy5MESG6CeqJ/M1NS9XOV99dMdAZYBpuft0xvIm3D9lWr5nuX89fTw90FlxsxP/YyA==
   dependencies:
     qface "^1.4.1"
 
 "@satorijs/adapter-satori@^1.0.3":
   version "1.0.3"
 
-"@satorijs/adapter-telegram@^4.2.1":
-  version "4.2.1"
+"@satorijs/adapter-telegram@^4.3.0":
+  version "4.3.0"
+  resolved "https://registry.npmjs.org/@satorijs/adapter-telegram/-/adapter-telegram-4.3.0.tgz"
+  integrity sha512-nnGW55dMgSUBZQfLF3od7txY/zpMBzg1cYyLjGiaklysjNtGmNChbs4/8bJp2y9SeOie7NlcjikkAdRGYD7vlw==
   dependencies:
     file-type "^16.5.4"
     form-data "^4.0.0"
 
-"@satorijs/core@^3.3.2", "@satorijs/core@3.3.3":
-  version "3.3.3"
+"@satorijs/core@^3.4.1", "@satorijs/core@3.4.1":
+  version "3.4.1"
+  resolved "https://registry.npmjs.org/@satorijs/core/-/core-3.4.1.tgz"
+  integrity sha512-s1gdyrAqJuSpnEYzKGnPQPnu3ViC/1Y7a3Uce6f0+PSHpqaQyTuuHSUxmwwOKfoTmjngA/YjeTHNr+pLz+VrsA==
   dependencies:
     "@cordisjs/logger" "^0.1.3"
-    "@satorijs/element" "^2.6.1"
+    "@cordisjs/timer" "^0.2.0"
+    "@satorijs/element" "^3.0.0"
     "@satorijs/protocol" "^1.1.3"
-    cordis "^3.4.1"
-    cordis-axios "^4.0.1"
-    cosmokit "^1.5.1"
-    schemastery "^3.14.2"
+    cordis "^3.6.0"
+    cordis-axios "^4.0.2"
+    cosmokit "^1.5.2"
+    schemastery "^3.14.3"
     ws "^8.14.2"
 
 "@satorijs/element@^2.6.1":
@@ -500,16 +542,25 @@
   dependencies:
     cosmokit "^1.5.1"
 
+"@satorijs/element@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.npmjs.org/@satorijs/element/-/element-3.0.0.tgz"
+  integrity sha512-5Nis5vFy/+tW3yFs7VIb0k+92xQdLfOzbRC0jX0bpclwXFhfGp/2QX1YEq0dwX4/kkQw9JyJwowmZHjSf6k3eg==
+  dependencies:
+    cosmokit "^1.5.2"
+
 "@satorijs/protocol@^1.1.3":
   version "1.1.3"
   dependencies:
     "@satorijs/element" "^2.6.1"
     cosmokit "^1.5.1"
 
-"@satorijs/satori@^3.2.1", "@satorijs/satori@^3.3.0", "@satorijs/satori@^3.3.1", "@satorijs/satori@^3.3.2", "@satorijs/satori@^3.3.3":
-  version "3.3.3"
+"@satorijs/satori@^3.2.1", "@satorijs/satori@^3.3.0", "@satorijs/satori@^3.3.1", "@satorijs/satori@^3.4.0", "@satorijs/satori@^3.4.1":
+  version "3.4.1"
+  resolved "https://registry.npmjs.org/@satorijs/satori/-/satori-3.4.1.tgz"
+  integrity sha512-dKWNmheBqub/PjBL4EyduVcB3VHtqOKIv0z5yvaAHZ92IHw44qJMAaX+s5izhbukSwRgqAwznxt8heMx/+qayw==
   dependencies:
-    "@satorijs/core" "3.3.3"
+    "@satorijs/core" "3.4.1"
     "@types/ws" "^8.5.10"
     file-type "^16.5.4"
     http-proxy-agent "^5.0.0"
@@ -827,10 +878,12 @@ atsc@^1.2.2:
     js-yaml "^4.1.0"
     tsconfig-utils "^3.0.0"
 
-axios@^1.4.0:
-  version "1.6.2"
+axios@^1.6.2:
+  version "1.6.5"
+  resolved "https://registry.npmjs.org/axios/-/axios-1.6.5.tgz"
+  integrity sha512-Ii012v05KEVuUoFWmMW/UQv9aRIc3ZwkWDcM+h5Il8izZCtRVpDUfwpoFf7eOtajT3QiGR4yDUx7lPqHJULgbg==
   dependencies:
-    follow-redirects "^1.15.0"
+    follow-redirects "^1.15.4"
     form-data "^4.0.0"
     proxy-from-env "^1.1.0"
 
@@ -993,20 +1046,26 @@ cookies@~0.8.0:
 copy-to@^2.0.1:
   version "2.0.1"
 
-cordis-axios@^4.0.1:
-  version "4.0.1"
+cordis-axios@^4.0.2:
+  version "4.0.2"
+  resolved "https://registry.npmjs.org/cordis-axios/-/cordis-axios-4.0.2.tgz"
+  integrity sha512-l21RRk7tzzHEtU4DTYeRZOFEWziEG9hDeclLmvSYetyv27nPnHqU5JKZeThQ/PJkjj16X0oHdz2AHa39Aa2SXQ==
   dependencies:
-    axios "^1.4.0"
-    cosmokit "^1.5.1"
+    axios "^1.6.2"
+    cosmokit "^1.5.2"
     mime-db "^1.52.0"
 
-cordis@^3.4.0, cordis@^3.4.1:
-  version "3.4.1"
+cordis@^3.4.0, cordis@^3.4.1, cordis@^3.5.1, cordis@^3.6.0:
+  version "3.6.1"
+  resolved "https://registry.npmjs.org/cordis/-/cordis-3.6.1.tgz"
+  integrity sha512-DhRT2t2aWpojX1C8IYiIxaEE40SSlTnJpEKALfk2j4TCyTa398XtZ0uy1xFlOc6/gDGyG1QPAsRj0ly0pjrqlg==
   dependencies:
-    cosmokit "^1.5.1"
+    cosmokit "^1.5.2"
 
-cosmokit@^1.4.2, cosmokit@^1.5.1:
-  version "1.5.1"
+cosmokit@^1.4.2, cosmokit@^1.5.1, cosmokit@^1.5.2:
+  version "1.5.2"
+  resolved "https://registry.npmjs.org/cosmokit/-/cosmokit-1.5.2.tgz"
+  integrity sha512-l4m/Iz0ZZ4nMaVsCC493suyUgeuAoxnDQI+UKt+vVXO+8zBVcrRKzv8m8q+SkXwxHcWluSMHw1AaZc9U2amabw==
 
 cross-env@^7.0.3:
   version "7.0.3"
@@ -1206,6 +1265,8 @@ fast-glob@^3.2.9:
 
 fastest-levenshtein@^1.0.16:
   version "1.0.16"
+  resolved "https://registry.npmjs.org/fastest-levenshtein/-/fastest-levenshtein-1.0.16.tgz"
+  integrity sha512-eRnCtTTtGZFpQCwhJiUOuxPQWRXVKYDn0b2PeHfXL6/Zi53SLAzAHfVhVWK2AryC/WH05kGfxhFIPvTF0SXQzg==
 
 fastq@^1.6.0:
   version "1.16.0"
@@ -1232,8 +1293,10 @@ fill-range@^7.0.1:
 flat@^5.0.2:
   version "5.0.2"
 
-follow-redirects@^1.15.0:
-  version "1.15.3"
+follow-redirects@^1.15.4:
+  version "1.15.5"
+  resolved "https://registry.npmjs.org/follow-redirects/-/follow-redirects-1.15.5.tgz"
+  integrity sha512-vSFWUON1B+yAw1VN4xMfxgn5fTUiaOzAJCKBwIIgT/+7CuGy9+r+5gITvP62j3RmaD5Ph65UaERdOSRGUzZtgw==
 
 form-data@^4.0.0:
   version "4.0.0"
@@ -1388,6 +1451,8 @@ immutable@^4.0.0:
 
 inaba@^1.1.1:
   version "1.1.1"
+  resolved "https://registry.npmjs.org/inaba/-/inaba-1.1.1.tgz"
+  integrity sha512-VYgrcz9EwjHELNU74R/p81U/G00u8KuFzao43pyNp7UZix+NY78eUzBy1Ks0tSgxgia+luJMvTD67vV02pk9yg==
 
 indent-string@^4.0.0:
   version "4.0.0"
@@ -1534,8 +1599,10 @@ koishi-plugin-assets-local@3.2.1:
     "@koishijs/assets" "^1.0.3"
     file-type "^16.5.4"
 
-koishi-plugin-blockly-null@1.2.4:
-  version "1.2.4"
+koishi-plugin-blockly-null@1.2.6:
+  version "1.2.6"
+  resolved "https://registry.npmjs.org/koishi-plugin-blockly-null/-/koishi-plugin-blockly-null-1.2.6.tgz"
+  integrity sha512-ru1h+UE8KUo5WfLCLAFchBuEtnVnvhpc1zx3+oFVU6Ik7Zz27t2UHY5jmMcnF7MD2guebGDB1xcyDtc7VY1eMw==
   dependencies:
     jsonpath-plus "^7.2.0"
     uuid "^9.0.0"
@@ -1570,14 +1637,16 @@ koishi-plugin-telemetry@^0.0.2:
 koishi-plugin-theme-vanilla@^1.0.6:
   version "1.0.6"
 
-koishi@^4.10.3, koishi@^4.12.8, koishi@^4.13.6, koishi@^4.15.0, koishi@^4.15.1, koishi@^4.15.2, koishi@^4.15.3, koishi@^4.15.5, koishi@^4.15.6, koishi@^4.15.7, koishi@^4.16.0, koishi@^4.16.1, koishi@^4.16.2:
-  version "4.16.2"
+koishi@^4.10.3, koishi@^4.12.8, koishi@^4.13.6, koishi@^4.15.0, koishi@^4.15.1, koishi@^4.15.2, koishi@^4.15.3, koishi@^4.15.5, koishi@^4.15.6, koishi@^4.15.7, koishi@^4.16.0, koishi@^4.16.1, koishi@^4.16.2, koishi@^4.16.3, koishi@^4.16.4, koishi@4.16.4:
+  version "4.16.4"
+  resolved "https://registry.npmjs.org/koishi/-/koishi-4.16.4.tgz"
+  integrity sha512-PzeJMtOdDYczkcOiV8q76/G5J1h3GdWnCeJUjcEPJAsHNmlgInmAFelqXjpuxcz3+yr1knaFmV6wqABHRG0/AQ==
   dependencies:
-    "@koishijs/core" "4.16.2"
-    "@koishijs/loader" "4.3.2"
+    "@koishijs/core" "4.16.4"
+    "@koishijs/loader" "4.3.4"
     "@koishijs/plugin-server" "^3.1.3"
-    "@koishijs/utils" "^7.1.1"
-    "@satorijs/satori" "^3.3.2"
+    "@koishijs/utils" "^7.1.2"
+    "@satorijs/satori" "^3.4.1"
     cac "^6.7.14"
     kleur "^4.1.5"
 
@@ -1801,6 +1870,8 @@ puppeteer-finder@^1.1.0:
 
 qface@^1.4.1:
   version "1.4.1"
+  resolved "https://registry.npmjs.org/qface/-/qface-1.4.1.tgz"
+  integrity sha512-52qX9qdiDFd53xnYAFitkXVldcSddd4ZQiFTV2IluM+2HdDiJph3CKtmPi7CTCA9QF7K2d2WUAH3E2Y4P6fEjQ==
 
 qs@^6.5.2:
   version "6.11.2"
@@ -1882,10 +1953,12 @@ schemastery-vue@^7.2.2:
   dependencies:
     schemastery "^3.14.2"
 
-schemastery@^3.14.1, schemastery@^3.14.2:
-  version "3.14.2"
+schemastery@^3.14.1, schemastery@^3.14.2, schemastery@^3.14.3:
+  version "3.14.3"
+  resolved "https://registry.npmjs.org/schemastery/-/schemastery-3.14.3.tgz"
+  integrity sha512-iA2jqcsbjyBKR091FhI8aZQz90dzlrhSxJ12wBr3vdW8LjvWjoOpK4bUhNjnqD/0dyrart3cz0HJ3jmX+VuLLg==
   dependencies:
-    cosmokit "^1.5.1"
+    cosmokit "^1.5.2"
 
 semver@^7.5.4:
   version "7.5.4"
