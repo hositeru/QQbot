@@ -42,6 +42,9 @@ export module SexManager {
       if(data[0].estrus!=1&&data[0].virgn==0){
         return '你突然对自己的行为感到强烈的羞耻，你阻止了自己。';
       }
+      if(data[0].locat!='旅馆'){
+        return '这里不能卖春';
+      }
       let num=Tools.generateRandomNumber(0, 100);
       let pregNum=Tools.generateRandomNumber(0, 30);
       let preg=0;
@@ -55,6 +58,7 @@ export module SexManager {
         hunger:data[0].hunger-40,
         acme:0,
         evalue:data[0].evalue+1,
+        elevel:(data[0].elevel<1?1:data[0].elevel),
         estrus:0,
         goldc:data[0].goldc+money,
         virgn:1,

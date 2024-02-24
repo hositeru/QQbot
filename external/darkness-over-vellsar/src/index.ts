@@ -9,6 +9,7 @@ import { pathToFileURL } from 'url'
 import { resolve } from 'path'
 import { EatManager } from './eatManager'
 import { SexManager } from './sexManager'
+import { SearchManager } from './searchManager'
 export const name = 'darkness-over-vellsar'
 export interface Config {}
 export const Config: Schema<Config> = Schema.object({})
@@ -77,6 +78,7 @@ function init(methodExecutor:Tools.MethodExecutor): void {
   methodExecutor.addMethod("#卖春", SexManager.prostitution);
   methodExecutor.addMethod("#脱下", takeoff);
   methodExecutor.addMethod("#时间经过", timeSkip);
+  methodExecutor.addMethod("#探索", SearchManager.search);
 }
 
 function formatDate(): string {
@@ -915,6 +917,9 @@ async function info(session: any,ctx: Context): Promise<string> {
     );
     myMap.set(
       '奴隶市场', '\n露天市场上，生人拖曳着镣铐，目光中充满无奈。拍卖师高声宣布每个奴隶的特长，而买主们面无表情地检视这些被摆在架子上的人。市场上充斥着沉重的氛围，暴露了这个虚伪而残酷的一面。\n\n#出售列表\n#卖出 xxx\n#购买 xxx 数量'
+    );
+    myMap.set(
+      '地下街', '\n这里是地下街，治安混乱、暴力横行。\n\n#探索'
     );
     return myMap;
 }

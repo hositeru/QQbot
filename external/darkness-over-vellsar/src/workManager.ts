@@ -17,16 +17,7 @@ export module WorkManager {
       const methodExecutor = new Tools.MethodExecutor();
       workInit(methodExecutor);
       return methodExecutor.executeMethod(data[0].locat, session,ctx,data);
-      if(data[0].locat=='旅馆'){
-         return hotel(session,ctx,data);
-      }else if(data[0].locat=='娼馆'){
-         return brothel(session,ctx,data);
-      }
-      return '你所在地点无法打工';
     }
-
-    
-    
 }
 
 

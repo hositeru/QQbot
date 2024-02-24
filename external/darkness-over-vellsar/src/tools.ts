@@ -15,7 +15,7 @@ export module Tools {
         if (method) {
             return method(...args);
         } else {
-            return Promise.resolve(`我听不懂'${methodName}'`);
+            return Promise.resolve(`我听不懂`);
         }
     }
   }
