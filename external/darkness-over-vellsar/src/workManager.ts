@@ -23,11 +23,32 @@ export module WorkManager {
 
 
 function workInit(methodExecutor: Tools.MethodExecutor) {
-  methodExecutor.addMethod("旅馆", hotel);
-  methodExecutor.addMethod("龙人酒吧", bar);
-  methodExecutor.addMethod("娼馆", brothel);
+  methodExecutor.addMethod("福利社", fulishe);
+  // methodExecutor.addMethod("旅馆", hotel);
+  // methodExecutor.addMethod("龙人酒吧", bar);
+  // methodExecutor.addMethod("娼馆", brothel);
 }
-
+async function fulishe(session: any,ctx: Context,data: Pick<ap01, Keys<ap01, any>>[]):Promise<string> {
+  if(data[0].timestage!='早晨'&&data[0].timestage!='上午'&&data[0].timestage!='正午'&&data[0].timestage!='下午'&&data[0].timestage!='傍晚'&&data[0].timestage!='深夜'){
+     return '现在还没有开业，请稍后再来。';
+   }
+   let str='你在福利社工作了一会儿。';
+   str+='\n体力-30，精力-30，饱食度-30，GP+5000';
+   let incap=0;
+   if(data[0].stamina<40||data[0].spirit<40||data[0].hunger<40){
+    incap=1;
+    str+='\n你体力不支晕倒了，被人抬去了旅馆房间。';
+   }
+   await ctx.database.set('ap01', session.userId, {
+    stamina:data[0].stamina-30,
+    spirit:data[0].spirit-30,
+    hunger:data[0].hunger-30,
+    incap:incap,
+    goldc:data[0].goldc+5000,
+    timestage:Tools.getNextTime(data[0].timestage),
+  });
+  return str;
+}
 async function hotel(session: any,ctx: Context,data: Pick<ap01, Keys<ap01, any>>[]):Promise<string> {
   if(data[0].timestage!='早晨'&&data[0].timestage!='正午'&&data[0].timestage!='傍晚'){
      return '现在还没有开业，请稍后再来。';
@@ -82,7 +103,7 @@ async function hotel(session: any,ctx: Context,data: Pick<ap01, Keys<ap01, any>>
     sexP+=20;
    }
    str+='\n店长大叔：真是帮大忙了！这是你的薪水！';
-   str+='\n体力-30，精力-30，饱食度-30，金币+480';
+   str+='\n体力-30，精力-30，饱食度-30，GP+480';
    let incap=0;
    if(data[0].stamina<40||data[0].spirit<40||data[0].hunger<40){
     incap=1;
@@ -153,7 +174,7 @@ async function bar(session: any,ctx: Context,data: Pick<ap01, Keys<ap01, any>>[]
 
   let money=800+sextimes*500;
    str+='\n酒吧老板：作为新人来讲干得很不错啊！这是你今天的薪水！';
-   str+='\n体力-40，精力-40，饱食度-40，金币+'+money;
+   str+='\n体力-40，精力-40，饱食度-40，GP+'+money;
    let incap=0;
    let locatUpd='龙人酒吧';
    if(data[0].stamina<60||data[0].spirit<60||data[0].hunger<60){

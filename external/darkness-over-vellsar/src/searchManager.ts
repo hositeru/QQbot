@@ -20,7 +20,7 @@ function searchInit(methodExecutor: Tools.MethodExecutor) {
 
 async function undergroundStreets(session: any,ctx: Context,data: Pick<ap01, Keys<ap01, any>>[]):Promise<string> {
 const eventlist=EventMaster.getEventList('H','地下街',data[0].elevel);
-let sts=Tools.generateRandomNumber(0, eventlist.length);
+let sts=Tools.generateRandomNumber(0, eventlist.length-1);
 let event=eventlist[sts];
 let str=event.def;
 let incap=0;
@@ -110,7 +110,7 @@ return event.def;
   //   sexP+=20;
   //  }
   //  str+='\n店长大叔：真是帮大忙了！这是你的薪水！';
-  //  str+='\n体力-30，精力-30，饱食度-30，金币+480';
+  //  str+='\n体力-30，精力-30，饱食度-30，GP+480';
   //  let incap=0;
   //  if(data[0].stamina<40||data[0].spirit<40||data[0].hunger<40){
   //   incap=1;

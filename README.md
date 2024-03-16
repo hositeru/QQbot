@@ -95,7 +95,7 @@ npm run setup darkness-over-vellsar
   [Lv4星辉彩奈]
 
 星辉彩奈你的当前数据：
-金币：0
+GP：0
 堕落：0
 经验：0
 种族：妖族

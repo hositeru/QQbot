@@ -59,7 +59,12 @@ export interface ap01 {
      splmis :number
      slavery :number
      acme :number
-
+     measure:number
+     gentle:number
+     innocence:number
+     mental:number
+     crazy:number
+     charisma:number
 }
 export interface ap02 {
     id :string
@@ -138,6 +143,12 @@ export module DB {
                 splmis :{ type: 'integer' },
                 slavery :{ type: 'integer' },
                 acme :{ type: 'integer' },
+                measure :{ type: 'integer' },
+                gentle :{ type: 'integer' },
+                innocence :{ type: 'integer' },
+                mental :{ type: 'integer' },
+                crazy :{ type: 'integer' },
+                charisma :{ type: 'integer' },
             }, {
                 primary: 'id',
             })

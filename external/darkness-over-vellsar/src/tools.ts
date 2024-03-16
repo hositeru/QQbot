@@ -42,7 +42,7 @@ export module Tools {
       return '你还没有决定过你的名字。\n请发送 /决定名字 XXX 来决定你的角色名字。';
     }
     // 体精饥小于0或者行动不能时不能走路
-    if(data[0].stamina<0||data[0].spirit<0||data[0].hunger<0||data[0].incap==1){
+    if(data[0].stamina<0||data[0].spirit<0||data[0].incap==1){
       return '你使不上一点劲，哪里都去不了。';
     }
     // 睡觉时不能走路
