@@ -11,6 +11,7 @@ import { EatManager } from './eatManager'
 import { SexManager } from './sexManager'
 import { SearchManager } from './searchManager'
 import { SkillManager } from './skillManager'
+import { EventManager } from './eventManager'
 export const name = 'darkness-over-vellsar'
 export interface Config {}
 export const Config: Schema<Config> = Schema.object({})
@@ -35,7 +36,22 @@ export function apply(ctx: Context) {
     if(data==null||data.length<1){
       initCreateChara(methodExecutor);
     }else{
-      init(methodExecutor);
+      switch (data[0].locat) {
+        case '图书馆':
+          initLib(methodExecutor);break;
+        case '餐厅':
+          initRestaurant(methodExecutor);break;
+        case 'MIEMIE':
+        initBath(methodExecutor);break;
+        case 'BATTLE9影城':
+        initCinema(methodExecutor);break;
+        case '喷泉广场':
+        initFountain(methodExecutor);break;
+        case '健身房':
+        initGym(methodExecutor);break;
+        default:
+          init(methodExecutor);
+      }
     }
     return methodExecutor.executeMethod(extractCommand(str), session, ctx);
   })
@@ -47,6 +63,12 @@ function initCreateChara(methodExecutor:Tools.MethodExecutor): void {
   methodExecutor.addMethod("/选择种族", selectRace);
   methodExecutor.addMethod("/选择性别", selectGender);
   methodExecutor.addMethod("/完成角色创建", complete);
+  methodExecutor.addMethod("/背包", inventory);
+  methodExecutor.addMethod("/醒来", wakeUp);
+  methodExecutor.addMethod("/睡觉", sleep);
+  methodExecutor.addMethod("/查看", info);
+  methodExecutor.addMethod("/猜拳", rockPaperScissors);
+  methodExecutor.addMethod("/属性", parameter);
 }
 function init(methodExecutor:Tools.MethodExecutor): void {
   methodExecutor.addMethod("/创建角色", createChara);
@@ -85,7 +107,7 @@ function init(methodExecutor:Tools.MethodExecutor): void {
   methodExecutor.addMethod("#抱起", pickup);
   methodExecutor.addMethod("#打工", WorkManager.work);
   methodExecutor.addMethod("#跳舞", WorkManager.work);
-  methodExecutor.addMethod("#就餐", EatManager.eat);
+  //methodExecutor.addMethod("#就餐", EatManager.eat);
   methodExecutor.addMethod("#出售列表", sellList);
   methodExecutor.addMethod("#援交", sex);
   methodExecutor.addMethod("#自慰", SexManager.masturbation);
@@ -93,8 +115,130 @@ function init(methodExecutor:Tools.MethodExecutor): void {
   methodExecutor.addMethod("#脱下", takeoff);
   methodExecutor.addMethod("#时间经过", timeSkip);
   methodExecutor.addMethod("#探索", SearchManager.search);
+  methodExecutor.addMethod("#阅读", EventManager.event1);
+}
+function initLib(methodExecutor:Tools.MethodExecutor): void {
+  methodExecutor.addMethod("#地图", map);
+  methodExecutor.addMethod("#属性", parameter); 
+  methodExecutor.addMethod("#去", startsWithGo);
+  methodExecutor.addMethod("#醒来", wakeUp);
+  methodExecutor.addMethod("#睡觉", sleep);
+  methodExecutor.addMethod("#自慰", SexManager.masturbation);
+  methodExecutor.addMethod("#杂志（宠物特辑）", EventManager.event1);
+  methodExecutor.addMethod("#历史类的书", EventManager.event2);
+  methodExecutor.addMethod("#哲学书", EventManager.event3);
+  methodExecutor.addMethod("#杂志（炽天使特辑）", EventManager.event4);
+  methodExecutor.addMethod("#恋爱小说", EventManager.event5);
+  methodExecutor.addMethod("#绘本", EventManager.event6);
+  methodExecutor.addMethod("#杂志（泳装写真特辑）", EventManager.event7);
+  methodExecutor.addMethod("#轻小说", EventManager.event8);
+  methodExecutor.addMethod("#医学书籍", EventManager.event9);
+  methodExecutor.addMethod("#杂志（神秘现象特辑）", EventManager.event10);
+  methodExecutor.addMethod("#随笔", EventManager.event11);
+  methodExecutor.addMethod("#自我成长书籍", EventManager.event12);
+}
+function initRestaurant(methodExecutor:Tools.MethodExecutor): void {
+  methodExecutor.addMethod("#地图", map);
+  methodExecutor.addMethod("#属性", parameter); 
+  methodExecutor.addMethod("#去", startsWithGo);
+  methodExecutor.addMethod("#醒来", wakeUp);
+  methodExecutor.addMethod("#睡觉", sleep);
+  methodExecutor.addMethod("#自慰", SexManager.masturbation);
+  methodExecutor.addMethod("#披萨", EatManager.food1);
+  methodExecutor.addMethod("#热狗堡", EatManager.food2);
+  methodExecutor.addMethod("#汉堡", EatManager.food3);
+  methodExecutor.addMethod("#口粮饼干", EatManager.food4);
+  methodExecutor.addMethod("#刀削面", EatManager.food5);
+  methodExecutor.addMethod("#麻婆豆腐", EatManager.food6);
+  methodExecutor.addMethod("#意式奶酪", EatManager.food7);
+  methodExecutor.addMethod("#珍珠奶茶", EatManager.food8);
+  methodExecutor.addMethod("#椰果", EatManager.food9);
+  methodExecutor.addMethod("#黄金炒饭", EatManager.food10);
+  methodExecutor.addMethod("#粽子", EatManager.food11);
+  methodExecutor.addMethod("#饭团", EatManager.food12);
 }
 
+function initBath(methodExecutor:Tools.MethodExecutor): void {
+  methodExecutor.addMethod("#地图", map);
+  methodExecutor.addMethod("#属性", parameter); 
+  methodExecutor.addMethod("#去", startsWithGo);
+  methodExecutor.addMethod("#醒来", wakeUp);
+  methodExecutor.addMethod("#睡觉", sleep);
+  methodExecutor.addMethod("#自慰", SexManager.masturbation);
+  methodExecutor.addMethod("#露天泳池", EventManager.event13);
+  methodExecutor.addMethod("#桑拿", EventManager.event14);
+  methodExecutor.addMethod("#泡泡按摩浴", EventManager.event15);
+  methodExecutor.addMethod("#蒸气桑拿", EventManager.event16);
+  methodExecutor.addMethod("#冷水浴池", EventManager.event17);
+  methodExecutor.addMethod("#喷射按摩池", EventManager.event18);
+  methodExecutor.addMethod("#岩盘浴", EventManager.event19);
+  methodExecutor.addMethod("#搓澡", EventManager.event20);
+  methodExecutor.addMethod("#电气浴池", EventManager.event21);
+  methodExecutor.addMethod("#浊汤", EventManager.event22);
+  methodExecutor.addMethod("#瀑布浴", EventManager.event23);
+  methodExecutor.addMethod("#足浴", EventManager.event24);
+}
+
+function initCinema(methodExecutor:Tools.MethodExecutor): void {
+  methodExecutor.addMethod("#地图", map);
+  methodExecutor.addMethod("#属性", parameter); 
+  methodExecutor.addMethod("#去", startsWithGo);
+  methodExecutor.addMethod("#醒来", wakeUp);
+  methodExecutor.addMethod("#睡觉", sleep);
+  methodExecutor.addMethod("#自慰", SexManager.masturbation);
+  methodExecutor.addMethod("#动作电影", EventManager.event25);
+  methodExecutor.addMethod("#恋爱电影", EventManager.event26);
+  methodExecutor.addMethod("#动物电影", EventManager.event27);
+  methodExecutor.addMethod("#科幻电影", EventManager.event28);
+  methodExecutor.addMethod("#恐怖电影", EventManager.event29);
+  methodExecutor.addMethod("#喜剧电影", EventManager.event30);
+  methodExecutor.addMethod("#青春电影", EventManager.event31);
+  methodExecutor.addMethod("#灾难电影", EventManager.event32);
+  methodExecutor.addMethod("#鲨鱼电影", EventManager.event33);
+  methodExecutor.addMethod("#科幻恐怖电影", EventManager.event34);
+  methodExecutor.addMethod("#悬疑电影", EventManager.event35);
+  methodExecutor.addMethod("#侠义电影", EventManager.event36);
+}
+function initFountain(methodExecutor:Tools.MethodExecutor): void {
+  methodExecutor.addMethod("#地图", map);
+  methodExecutor.addMethod("#属性", parameter); 
+  methodExecutor.addMethod("#去", startsWithGo);
+  methodExecutor.addMethod("#醒来", wakeUp);
+  methodExecutor.addMethod("#睡觉", sleep);
+  methodExecutor.addMethod("#自慰", SexManager.masturbation);
+  methodExecutor.addMethod("#筷子卷", EventManager.event37);
+  methodExecutor.addMethod("#御座候", EventManager.event38);
+  methodExecutor.addMethod("#蛋仙贝", EventManager.event39);
+  methodExecutor.addMethod("#默剧", EventManager.event40);
+  methodExecutor.addMethod("#杂耍", EventManager.event41);
+  methodExecutor.addMethod("#叫卖香蕉", EventManager.event42);
+  methodExecutor.addMethod("#摇滚乐", EventManager.event43);
+  methodExecutor.addMethod("#抒情歌", EventManager.event44);
+  methodExecutor.addMethod("#激情硬核", EventManager.event45);
+  methodExecutor.addMethod("#发面纸", EventManager.event46);
+  methodExecutor.addMethod("#街头问卷调查", EventManager.event47);
+  methodExecutor.addMethod("#演讲", EventManager.event48);
+}
+function initGym(methodExecutor:Tools.MethodExecutor): void {
+  methodExecutor.addMethod("#地图", map);
+  methodExecutor.addMethod("#属性", parameter); 
+  methodExecutor.addMethod("#去", startsWithGo);
+  methodExecutor.addMethod("#醒来", wakeUp);
+  methodExecutor.addMethod("#睡觉", sleep);
+  methodExecutor.addMethod("#自慰", SexManager.masturbation);
+  methodExecutor.addMethod("#伸展运动", EventManager.event37);
+  methodExecutor.addMethod("#卧推", EventManager.event38);
+  methodExecutor.addMethod("#跑步机", EventManager.event39);
+  methodExecutor.addMethod("#热瑜伽", EventManager.event40);
+  methodExecutor.addMethod("#哑铃", EventManager.event41);
+  methodExecutor.addMethod("#飞轮车", EventManager.event42);
+  methodExecutor.addMethod("#有氧舞蹈", EventManager.event43);
+  methodExecutor.addMethod("#腿部推举机", EventManager.event44);
+  methodExecutor.addMethod("#划船机", EventManager.event45);
+  methodExecutor.addMethod("#拳击训练", EventManager.event46);
+  methodExecutor.addMethod("#深蹲", EventManager.event47);
+  methodExecutor.addMethod("#腹部训练机", EventManager.event48);
+}
 function formatDate(): string {
   const currentDate = new Date();
 
@@ -230,11 +374,8 @@ async function decideName(session: any,ctx: Context): Promise<string> {
 
 // /种族列表
 async function getRaceList(session: any,ctx: Context): Promise<string> {
-  return '【怨灵】\n人族已经灭绝，其怨灵现在附着于遗物之中。'+
-  '\n\n\n【妖狐】\n妖狐是纯粹的魔力聚合体。曾经，九尾妖狐独自形成一支独特的妖族，其强大的魔力成为其他妖族垂涎不已的对象。后来，她遭到众多妖族的共同讨伐，其象征着强大魔力的尾巴从本体分离，演变成了独立具有意识的个体。'+
-  '\n\n\n【人狼】\n人狼是妖族中的种族斗争中脱颖而出的胜者，也是在九尾妖狐被讨伐时的主要势力。现如今，他们正全力搜寻分裂后的妖狐，并打算将其吞噬。'+
-  '\n\n\n【龙人】\n在威尔萨，龙人是最庞大的族群，拥有明确的社会层级结构。这个族群的领导者是一位年轻而威严的龙人，广大族人都尊称他为少主。'+
-  '\n\n\n【吸血鬼】\n强大的不死种族——吸血鬼，遭受其他种族的联合讨伐，几近灭绝。';
+  return '【人类】\n世界上仅存少数真正的普通的人类'+
+  '\n\n\n【人类？】\n自我认知为人类，但本身隐藏着很多秘密';
 }
 
 // /选择种族
@@ -248,7 +389,7 @@ async function selectRace(session: any,ctx: Context): Promise<string> {
       if(data[0].race!=null&&data[0].race.length>0){
         return '你已经选择过你的种族了。你的种族是'+data[0].race+'。';
       }else{
-        const allowedValues = ['怨灵', '妖狐', '人狼', '龙人', '吸血鬼'];
+        const allowedValues = ['人类', '人类？'];
         if (allowedValues.includes(match[1])) {
           await ctx.database.set('ap01', session.userId, {
             race: match[1],
@@ -963,7 +1104,7 @@ async function info(session: any,ctx: Context): Promise<string> {
     );
     // #杂志宠物特辑 #历史类的书 #哲学书
     myMap.set(
-      '图书馆', '\n\n#杂志宠物特辑\n#历史类的书\n#哲学书'
+      '图书馆', '\n\n#杂志（宠物特辑）\n#历史类的书\n#哲学书\n#杂志（炽天使特辑）\n#恋爱小说\n#绘本\n#杂志（泳装写真特辑）\n#轻小说\n#医学书籍\n#杂志（神秘现象特辑）\n#随笔\n#自我成长书籍'
     );
     // 学园基地
     myMap.set(
@@ -982,7 +1123,7 @@ async function info(session: any,ctx: Context): Promise<string> {
       '练团室', '\n\n#睡午觉\n#发声练习\n#主持练习'
     );
     myMap.set(
-      '健身房', '\n\n#伸展运动\n#卧推\n#跑步机'
+      '健身房', '\n\n#伸展运动\n#卧推\n#跑步机\n#热瑜伽\n#哑铃\n#飞轮车\n#有氧舞蹈\n#腿部推举机\n#划船机\n#拳击训练\n#深蹲\n#腹部训练机'
     );
     myMap.set(
       '商店', '\n\n#出售列表'
@@ -1000,7 +1141,7 @@ async function info(session: any,ctx: Context): Promise<string> {
       '竞技场', ''
     );
     myMap.set(
-      '餐厅', '\n\n#就餐'
+      '餐厅', '\n\n#披萨\n#热狗堡\n#汉堡\n#口粮饼干\n#刀削面\n#麻婆豆腐\n#意式奶酪\n#珍珠奶茶\n#椰果\n#黄金炒饭\n#粽子\n#饭团'
     );
     myMap.set(
       '殡仪馆', ''
@@ -1008,15 +1149,15 @@ async function info(session: any,ctx: Context): Promise<string> {
     // 特色街
     // 三温暖：芬兰式蒸汽浴
     myMap.set(
-      'MIEMIE', '\n\n#露天泳池\n#三温暖\n#泡泡按摩池'
+      'MIEMIE', '\n\n#露天泳池\n#桑拿\n#泡泡按摩浴\n#蒸气桑拿\n#冷水浴池\n#喷射按摩池\n#岩盘浴\n#搓澡\n#电气浴池\n#浊汤\n#瀑布浴\n#足浴'
     );
     // 动作电影 恋爱电影 动物电影
     myMap.set(
-      'BATTLE9影城', '\n\n#看电影'
+      'BATTLE9影城', '\n\n#动作电影\n#恋爱电影\n#动物电影\n#科幻电影\n#恐怖电影\n#喜剧电影\n#青春电影\n#灾难电影\n#鲨鱼电影\n#科幻恐怖电影\n#悬疑电影\n#侠义电影'
     );
     // 小卖部 筷子卷　御座候（味道像今川烧） 蛋仙贝
     myMap.set(
-      '喷泉广场', '\n\n#买点东西吃'
+      '喷泉广场', '\n\n#筷子卷\n#御座候\n#蛋仙贝\n#默剧\n#杂耍\n#叫卖香蕉\n#摇滚乐\n#抒情歌\n#激情硬核\n#发面纸\n#街头问卷调查\n#演讲'
     );
     // myMap.set(
     //   '龙人都市', String(h.image(pathToFileURL(resolve(__dirname, 'map/龙人都市.png')).href))
@@ -1169,7 +1310,7 @@ async function sleep(session: any,ctx: Context): Promise<string> {
     await ctx.database.set('ap01', session.userId, {
       sleep: 1,logindate:currentTime()
     });
-    return '你保持着决心，渐渐进入了梦乡。';
+    return '你闭上了眼，渐渐进入了梦乡。';
   }
 
 }
